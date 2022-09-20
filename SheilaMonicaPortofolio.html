@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+<body>
+    <label for="show-menu" class="menu-icon">
+        <span>
+            <img src="sosmed_icon/hamburger.png" alt="">
+        </span>
+    </label>
+        <div class="menu">
+        <div id="navbar" class="navbar">
+        <div id="navbar" class="nav-list">
+                <li class="navbar-text"><a id="nav-link" class ="nav-link" href="SheilaMonicaPortofolio.html">Home</a></li>
+                <li class="navbar-text"><a id="nav-link" class ="nav-link" href="CV.html">CV</a></li>
+                <li class="navbar-text"><a id="nav-link" class ="nav-link" href="portofolio.html">Portofolio</a></li>
+        </div>   
+        <script src="script.js"></script> 
+
+        </div>
+        <div class="intro">
+            <div class="nav-text">
+                <h1>SHEILA MONICA</h1>
+                <h3>Computer Science</h3>
+            </div>
+        </div>
+        </div>
+        <div class="introduction">
+            <div class="Profile">
+            <h1>Profile</h1>
+            <p> 
+            Hello Everyone, my name is Sheila Monica and I am currently a student at Bina Nusantara University. I am a friendly, cooperative, hardworking person who has good time management and also I am an open minded person who wants to explore and learn new things.
+            </p>
+            </div>
+            <div class="photo_profile">
+                <img src="profile_image/profilefiks.png" alt="">
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(window).scroll(function(){
+                var scroll = $(this).scrollTop();
+                $(".introduction").css({
+                    'background-size': 100+scroll+"%"
+                
+                });
+            });
+        </script>
+
+        <footer class="footer">
+                    <div class="headerfoot">Contact</div>
+                    <div class="sosmed">
+                        <div class="ig">
+                            <a href="https://www.instagram.com/direct/t/340282366841710300949128204397866293434/" target="_blank"><img src="sosmed_icon/ig2.png" alt=""></a>
+                        </div>
+                        <div class="linkedIn">
+                            <a href="https://www.linkedin.com/in/sheila-monica-b90692214/" target="_blank"><img src="sosmed_icon/linkedIn.png" alt=""></a>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="whatsApp.html"><img src="sosmed_icon/wa.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="copyright">copyright &copy;2022 designed by Sheila Monica</div>
+                    </div>
+        </footer>
+</body>
+</html>

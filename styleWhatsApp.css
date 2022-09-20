@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.border{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+}
+
+.wa_image{
+    padding-right: 5rem;
+}
+.wa_image img{
+    padding-left: 2vh;
+    width: 200%;
+    height: 100%;
+}
+
+.title{
+    /* padding-top: 15rem; */
+    font-size: 20px;
+}

@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 55rem;
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+    background-color: transparent;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 25px;
+}
+
+.navbar-text {
+    position: relative;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-list a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.nav-list a:hover{
+    color: #837257
+}
+
+.BgColour{
+    color: black;
+    width: 100%;
+    height: 7rem;
+    transition: all 1s;
+    background-color: white;
+    background-blend-mode: soft-light;
+    opacity: 90%;
+}
+
+.BgColour .nav-list a{
+    color: black;
+}
+
+.BgColour .logo img{
+    opacity: 100%;
+}
+
+.BgColour .nav-list a:hover{
+    color: #837257;
+}
+
+.cv{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+.cv img{
+    width: 100%;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    background: #16151a;
+    padding: 3rem;
+    padding-left: 10vh;
+}
+
+.copyright {
+    color: white;
+    padding: 1rem 0;
+    font-size: 10px;
+}
+
+.headerfoot {
+    color: white;
+    font-size: 30px;
+}
+
+.sosmed {
+    display: flex;
+}
+
+.linkedIn, .ig, .whatsapp {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.ig {
+    border: 2px solid #C13584;
+}
+
+.linkedIn {
+    border: 2px solid #0077B5;
+}
+
+.whatsapp{
+    border: 2px solid #25D366;
+}
+
+.linkedIn img, .ig img, .whatsapp img{
+    width: 100%;
+    height: auto;
+}
+
+.sosmed {
+    margin-top: 1rem;
+}
+
+.sosmed div:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.linkedIn:hover {
+    background-color: #0077B5;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 208, 255, 0.944);
+}
+
+.ig:hover {
+    background-color: #C13584;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(255, 0, 191, 0.6);
+}
+
+.whatsapp:hover {
+    background-color: #25D366;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgb(0, 255, 17);
+}
+
+/* Responsive Footer */
+@media (max-width: 800px) {
+    .footer {
+        flex-direction: column;
+    }
+    .sosmed {
+        width: 100%;
+    }
+    .headerfoot {
+        font-size: 20px;
+    }
+    .linkedIn, .ig, .whatsapp {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+    }
+    .copyright {
+        color: white;
+        padding: 1rem 0;
+        font-size: 5px;
+    }
+}
