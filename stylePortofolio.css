@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Add this */
     text-decoration: none;
     list-style: none;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -50,6 +51,7 @@
     background: rgba(0,0,0,0.8);
     z-index: 999;
     background-color: transparent;
+    overflow-x: hidden; 
 }
 
 .nav-list {
@@ -99,15 +101,16 @@
 
 .intro {
     width: 100%;
-    height: 70%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ede8df;
 }
 
 .nav-text {
     display: flex;
-    padding-top: 10rem;
+    padding-top: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -125,36 +128,44 @@
 
 @media screen and (max-width: 800px) {
     /* Display hamburger button */
+    .navbar{
+        display: none;
+    }
     .menu-icon {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
+        padding-left: 10vh;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         cursor: pointer;
     }
 
     /* A close button */
-    #show-menu:checked ~ .menu-icon span::after {
+    /* #show-menu:checked ~ .menu-icon span::after {
         content: "x";
         font-size: 2rem;
         color: black;
-    }
+    } */
 
     /* Replace hamburger button with close button 
     so make it disappear */
-    #show-menu:checked ~ .menu-icon span img {
-        display: none;
-    } 
+    /* #show-menu:checked ~ .menu-icon span img {
+        display:flex;
+        justify-content: left;
+        align-items: center;
+    }  */
 
     /* Make the bar displayed vertically not horizontally
     by changing from display: flex; to display: block; */
     .nav-list {
         display: block;
         position: fixed;
-        background: #14181f;
-        height: 100%;
+        background: #ede8df;
+        height: 20%;
         width: 100%;
         top: 70px;
-        left: -100%;
+        left: 5%;
         margin-left: 0;
         max-width: 22rem;
         overflow-y: scroll;
@@ -164,9 +175,13 @@
 
     /* When hamburger button is clicked
     make navigation bar visible */
-    #show-menu:checked ~ .nav-list{
+    /* #show-menu:checked ~ .nav-list{
         left: 0%;
+    } */
+    #show-menu:checked ~ .menu .navbar {
+        display: block;
     }
+
 
     .nav-list li {
         margin: 1rem; 
@@ -181,19 +196,31 @@
         font-weight: bold;
         line-height: 40px;
     }
+    #show-menu:checked ~ .menu-icon span::before {
+        content: "x"; /* Display "x" instead of burger icon */
+        font-size: 2rem;
+        color: black;
+    }
+    /* Hide the burger icon image when the menu is open */
+    #show-menu:checked ~ .menu-icon span img {
+        display: none;
+    }
+
 }
 
 .introduction{
     position: relative;
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: left;
+    padding-right: 2rem;
     align-items: center;
 }
 
 .LaForant{
-    width: 100%;
-    padding-left: 10rem;
+    width: 75%;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-bottom: 10rem;
 }
 
@@ -211,7 +238,7 @@
 }
 
 .photo_profile{
-    width: 50%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;

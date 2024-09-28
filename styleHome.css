@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Add this */
     text-decoration: none;
     list-style: none;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -24,6 +25,9 @@
     display: none;
 }
 
+.menu, .navbar {
+    max-width: 100%;
+}
 /* buat background home */
 .menu{
     position: relative;
@@ -47,9 +51,11 @@
     justify-content: space-around;
     width: 100%;
     height: 55rem;
-    background: rgba(0,0,0,0.8);
+    background: #ede8df;
+    /* background: rgba(0,0,0,0.8); */
     z-index: 999;
     background-color: transparent;
+    overflow-x: hidden; 
 }
 
 .nav-list {
@@ -120,41 +126,51 @@
 
 .nav-text h3{
     font-size: 2rem;
+    text-align: center;
+    align-items: center;
 }
 
 
 @media screen and (max-width: 800px) {
     /* Display hamburger button */
+    .navbar{
+        display: none;
+    }
     .menu-icon {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
+        padding-left: 10vh;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         cursor: pointer;
     }
 
     /* A close button */
-    #show-menu:checked ~ .menu-icon span::after {
+    /* #show-menu:checked ~ .menu-icon span::after {
         content: "x";
         font-size: 2rem;
         color: black;
-    }
+    } */
 
     /* Replace hamburger button with close button 
     so make it disappear */
-    #show-menu:checked ~ .menu-icon span img {
-        display: none;
-    } 
+    /* #show-menu:checked ~ .menu-icon span img {
+        display:flex;
+        justify-content: left;
+        align-items: center;
+    }  */
 
     /* Make the bar displayed vertically not horizontally
     by changing from display: flex; to display: block; */
     .nav-list {
         display: block;
         position: fixed;
-        background: #14181f;
-        height: 100%;
+        background: #ede8df;
+        height: 20%;
         width: 100%;
         top: 70px;
-        left: -100%;
+        left: 5%;
         margin-left: 0;
         max-width: 22rem;
         overflow-y: scroll;
@@ -164,9 +180,13 @@
 
     /* When hamburger button is clicked
     make navigation bar visible */
-    #show-menu:checked ~ .nav-list{
+    /* #show-menu:checked ~ .nav-list{
         left: 0%;
+    } */
+    #show-menu:checked ~ .menu .navbar {
+        display: block;
     }
+
 
     .nav-list li {
         margin: 1rem; 
@@ -181,14 +201,27 @@
         font-weight: bold;
         line-height: 40px;
     }
+    #show-menu:checked ~ .menu-icon span::before {
+        content: "x"; /* Display "x" instead of burger icon */
+        font-size: 2rem;
+        color: black;
+    }
+    /* Hide the burger icon image when the menu is open */
+    #show-menu:checked ~ .menu-icon span img {
+        display: none;
+    }
+
 }
 
 .introduction{
+    background-color: #ede8df;
     position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 
 .Profile{
@@ -231,19 +264,24 @@
         align-items: center;
     }
     .photo_profile img{
-        width: 30rem;
+        width: 50rem;
     }
 
     .Profile{
         width: 100%;
         padding-left: 0;
+        padding: 2rem 2rem 2rem 2rem;
     }
 
     .Profile h1{
-        font-size: 2rem;
+        font-size: 3rem;
         text-align: center;
     }
-    
+    .intro {
+        text-align: center;
+        align-items: center;
+    }
+
     .Profile p{
         width: 100%;
         font-size: 15px;
